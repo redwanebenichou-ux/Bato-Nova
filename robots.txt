@@ -1,0 +1,7 @@
+# BATI Nova - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://batinova.dz/sitemap.xml

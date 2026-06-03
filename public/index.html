@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0A1628">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="BATI Nova">
+
+  <!-- SEO -->
+  <title>BATI Nova - Marketplace Algérien de Construction | باطي نوفا</title>
+  <meta name="description" content="BATI Nova - Vente et location de matériaux et équipements de construction en Algérie. Achetez et louez vos matériaux de construction en ligne.">
+  <meta name="keywords" content="BATI Nova, matériaux construction, équipements BTP, vente matériaux Algérie, location matériaux, بناء, مواد بناء">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://batinova.dz">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BATI Nova - Marketplace Algérien de Construction">
+  <meta property="og:description" content="Vente et location de matériaux et équipements de construction en Algérie.">
+  <meta property="og:image" content="./logo.jpg">
+  <meta property="og:url" content="https://batinova.dz">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_DZ">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./logo.jpg">
+  <link rel="apple-touch-icon" href="./logo.jpg">
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css?v=20260603">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="./logo.jpg" alt="BATI Nova">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#home" class="header-logo">
+        <img src="./logo.jpg" alt="BATI Nova">
+        <span>BATI <span class="nova">Nova</span></span>
+      </a>
+      <div class="header-actions">
+        <button class="dark-toggle" id="darkToggle" onclick="App.toggleDark()" title="Mode sombre">
+          <span id="darkIcon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+        </button>
+        <button class="btn-icon" id="langBtn" onclick="App.toggleLang()" title="العربية" style="font-size:14px;font-weight:700">FR</button>
+        <button class="btn-icon" id="loginBtn" onclick="window.location.hash='login'" title="Mon compte">
+          <span class="icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="mainContent" style="padding-top:var(--header-height);min-height:100vh"></main>
+
+  <!-- Bottom Navigation / Desktop Sidebar -->
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="#home" class="bottom-nav-item" data-route="home">
+      <span class="icon icon-svg"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>
+      <span data-lang="home">Accueil</span>
+    </a>
+    <a href="#search" class="bottom-nav-item" data-route="search">
+      <span class="icon icon-svg"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span>
+      <span data-lang="search">Recherche</span>
+    </a>
+    <a href="#orders" class="bottom-nav-item" data-route="orders">
+      <span class="icon icon-svg"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></span>
+      <span data-lang="orders">Commandes</span>
+    </a>
+    <a href="#favorites" class="bottom-nav-item" data-route="favorites">
+      <span class="icon icon-svg"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+      <span data-lang="favorites">Favoris</span>
+    </a>
+    <a href="#profile" class="bottom-nav-item" data-route="profile">
+      <span class="icon icon-svg"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+      <span data-lang="account">Compte</span>
+    </a>
+  </nav>
+
+  <!-- Auth Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal">
+      <button class="modal-close" onclick="App.closeModal('authModal')">✕</button>
+      <div class="modal-logo">
+        <img src="./logo.jpg" alt="BATI Nova">
+        <h2>BATI Nova</h2>
+        <p>Connectez-vous à votre compte</p>
+      </div>
+      <div id="modalAuthContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script>
+    const APP_WILAYAS = [
+      'Adrar','Chlef','Laghouat','Oum El Bouaghi','Batna','Béjaïa','Biskra','Béchar','Blida','Bouira',
+      'Tamanrasset','Tébessa','Tlemcen','Tiaret','Tizi Ouzou','Alger','Djelfa','Jijel','Sétif','Saïda',
+      'Skikda','Sidi Bel Abbès','Annaba','Guelma','Constantine','Médéa','Mostaganem','M\'Sila','Mascara',
+      'Ouargla','Oran','El Bayadh','Illizi','Bordj Bou Arreridj','Boumerdès','El Tarf','Tindouf',
+      'Tissemsilt','El Oued','Khenchela','Souk Ahras','Tipaza','Mila','Aïn Defla','Naâma','Aïn Témouchent',
+      'Ghardaïa','Relizane','Timimoun','Bordj Badji Mokhtar','Ouled Djellal','Béni Abbès','In Salah',
+      'In Guezzam','Touggourt','Djanet','El M\'Ghair','El Meniaa'
+    ];
+  </script>
+  <script src="./js/lang.js?v=20260603"></script>
+  <script src="./js/api.js?v=20260603"></script>
+  <script src="./js/app.js?v=20260603"></script>
+  <script src="./js/pages.js?v=20260603"></script>
+</body>
+</html>
